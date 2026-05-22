@@ -6,9 +6,6 @@ A full-stack Job Roles & Employee Management Portal built with **React + Vite** 
 
 ## Screenshots
 
-### Home Page
-![Home Page](screenshots/home.png)
-
 ### Login
 ![Login](screenshots/login.png)
 
