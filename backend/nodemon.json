@@ -1,0 +1,5 @@
+{
+  "ignore": ["*.json", "data/", "store/", "db/"],
+  "watch": ["*.js"],
+  "ext": "js"
+}

@@ -1,0 +1,217 @@
+.page {
+  padding: 28px 0 60px;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.page-header h1 {
+  margin: 0 0 4px;
+  color: var(--kainos-navy);
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.page-sub { margin: 0; color: var(--text-muted); font-size: 15px; }
+
+.page-loading {
+  text-align: center;
+  padding: 56px 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 36px;
+  border-radius: 6px;
+  padding: 4px 0;
+}
+.back-link:hover { color: var(--kainos-navy); text-decoration: none; }
+
+/* ── Results count ── */
+.results-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.filter-bar .form-control {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+@media (max-width: 900px) {
+  .filter-bar { grid-template-columns: 1fr 1fr; }
+  .filter-bar .form-control:first-child { grid-column: 1 / -1; }
+  .filter-bar .btn { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .filter-bar { grid-template-columns: 1fr; }
+  .filter-bar .form-control:first-child { grid-column: auto; }
+}
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  padding: 56px 24px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+}
+.empty-state h3 { margin: 0 0 8px; color: var(--kainos-navy); font-size: 18px; }
+.empty-state p  { margin: 0; font-size: 14px; line-height: 1.6; }
+
+/* ── Role cards ── */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px;
+}
+.role-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+  display: flex; flex-direction: column;
+}
+.role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--kainos-green-light);
+}
+.role-card-top {
+  display: flex; flex-wrap: wrap;
+  gap: 6px; margin-bottom: 10px;
+}
+.role-card h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; }
+.role-card h3 a { color: var(--kainos-navy); text-decoration: none; }
+.role-card h3 a:hover { color: var(--kainos-green-dark); }
+.role-desc {
+  color: var(--text-muted);
+  font-size: 14px; line-height: 1.6;
+  margin: 0 0 14px; flex: 1;
+}
+.role-card-actions { margin-top: auto; }
+.btn-link { color: var(--kainos-green-dark); font-weight: 600; font-size: 14px; }
+.btn-link:hover { text-decoration: underline; }
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px; font-weight: 600; letter-spacing: .2px;
+}
+.badge-level      { background: rgba(26,53,93,.08);   color: var(--kainos-navy); }
+.badge-capability { background: rgba(125,194,66,.15); color: var(--kainos-green-dark); }
+
+/* ── Detail ── */
+.detail-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+.detail-top   { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.detail-card h1 { margin: 0 0 22px; color: var(--kainos-navy); font-size: clamp(22px, 4vw, 30px); font-weight: 700; }
+.detail-card h3 {
+  margin: 20px 0 8px;
+  color: var(--kainos-navy);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  font-weight: 700;
+}
+.detail-description { white-space: pre-wrap; line-height: 1.75; margin: 0; color: var(--text-soft); }
+.detail-meta {
+  margin-top: 26px; padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--text-muted);
+}
+.detail-actions {
+  margin-top: 26px;
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+
+/* ── Forms ── */
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  max-width: 780px;
+}
+.form-card h1  { margin: 0 0 6px; color: var(--kainos-navy); font-size: 24px; font-weight: 700; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-actions {
+  display: flex; justify-content: flex-end;
+  gap: 10px; margin-top: 22px; flex-wrap: wrap;
+}
+.char-count { text-align: right; font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+/* ── Modal ── */
+.modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(15,34,64,.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px; z-index: 1000;
+  animation: fadeIn .15s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  max-width: 440px; width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+.modal-card h2 { margin: 0 0 10px; color: var(--kainos-navy); font-size: 20px; }
+.modal-card p  { margin: 0 0 22px; color: var(--text-soft); line-height: 1.6; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+
+/* ── Textarea ── */
+textarea.form-control { resize: vertical; min-height: 120px; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .detail-card, .form-card { padding: 22px 16px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .page { padding: 20px 0 48px; }
+  .role-grid { grid-template-columns: 1fr; }
+  .form-card  { padding: 20px 14px; }
+  .form-actions { flex-direction: column-reverse; }
+  .form-actions .btn { width: 100%; }
+  .modal-card { padding: 22px 18px; }
+}
+@media (max-width: 360px) {
+  .detail-card, .form-card { padding: 18px 12px; }
+}

@@ -1,0 +1,135 @@
+.emp-filter-bar { grid-template-columns: 1fr; }
+
+.emp-number {
+  font-family: monospace;
+  font-size: 13px;
+  background: rgba(26,53,93,.07);
+  color: var(--kainos-navy);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+.emp-name-link { color: var(--kainos-navy); font-weight: 600; text-decoration: none; }
+.emp-name-link:hover { color: var(--kainos-green-dark); }
+
+/* ── Detail grid ── */
+.emp-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 22px;
+  margin-top: 8px;
+}
+.emp-detail-item h3 {
+  margin: 0 0 6px;
+  color: var(--kainos-navy);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  font-weight: 700;
+}
+.emp-detail-item p { margin: 0; color: var(--text-soft); line-height: 1.6; }
+
+.emp-salary {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--kainos-navy) !important;
+}
+.emp-address {
+  font-style: normal;
+  display: flex; flex-direction: column;
+  gap: 2px;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+/* ── Address fieldset ── */
+.address-fieldset {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px 6px;
+  margin: 14px 0;
+}
+.address-fieldset legend {
+  padding: 0 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--kainos-navy);
+  letter-spacing: .2px;
+}
+
+/* ── Shared table ── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  -webkit-overflow-scrolling: touch;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 560px;
+}
+.data-table th {
+  background: var(--bg);
+  color: var(--kainos-navy);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.data-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-soft);
+  vertical-align: middle;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: rgba(26,53,93,.025); }
+
+/* ── Mobile: stacked cards ── */
+@media (max-width: 640px) {
+  .data-table { min-width: unset; }
+  .data-table thead { display: none; }
+  .data-table, .data-table tbody { display: block; }
+  .data-table tr {
+    display: block;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .data-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 14px;
+    gap: 12px;
+  }
+  .data-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--kainos-navy);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    min-width: 80px;
+  }
+  .data-table td:last-child  { border-bottom: none; }
+  .text-right { text-align: left; }
+  .emp-detail-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .address-fieldset { padding: 14px 14px 4px; }
+}
