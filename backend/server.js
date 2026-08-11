@@ -78,8 +78,10 @@ app.get('/api', (req, res) => {
   res.json({ message: 'Kainos Portal API is running', version: '1.0.0' });
 });
 
-// Serve the built frontend (npm run build compiles ../frontend into this path)
-const FRONTEND_DIST = path.join(__dirname, process.env.FRONTEND_DIST_PATH || '../frontend/dist');
+// Serve the built frontend. `npm run build` compiles ../frontend and copies the
+// output into ./public — kept inside backend/ since that's the deploy root and
+// sibling directories (../frontend) don't survive into the runtime container.
+const FRONTEND_DIST = path.join(__dirname, process.env.FRONTEND_DIST_PATH || 'public');
 if (fs.existsSync(FRONTEND_DIST)) {
   app.use(express.static(FRONTEND_DIST));
   app.get('*', (req, res, next) => {
