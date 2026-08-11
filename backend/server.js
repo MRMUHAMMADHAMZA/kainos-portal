@@ -1,4 +1,6 @@
 require('dotenv').config();
+const path = require('path');
+const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -72,9 +74,19 @@ app.use('/api/auth', authRoutes);
 app.use('/api/job-roles', jobRoleRoutes);
 app.use('/api/employees', employeeRoutes);
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.json({ message: 'Kainos Portal API is running', version: '1.0.0' });
 });
+
+// Serve the built frontend (npm run build compiles ../frontend into this path)
+const FRONTEND_DIST = path.join(__dirname, process.env.FRONTEND_DIST_PATH || '../frontend/dist');
+if (fs.existsSync(FRONTEND_DIST)) {
+  app.use(express.static(FRONTEND_DIST));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(path.join(FRONTEND_DIST, 'index.html'));
+  });
+}
 
 app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });
