@@ -1,7 +1,7 @@
 .hero {
   background:
-    radial-gradient(ellipse at top right, rgba(125,194,66,.15) 0%, transparent 50%),
-    linear-gradient(135deg, var(--kainos-navy) 0%, #21487B 100%);
+    radial-gradient(ellipse at top right, rgba(224,142,43,.15) 0%, transparent 50%),
+    linear-gradient(135deg, var(--kainos-navy) 0%, #4A4499 100%);
   color: #fff;
   padding: 88px 24px 80px;
   text-align: center;
@@ -109,7 +109,7 @@
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(125,194,66,.3);
+  box-shadow: 0 4px 12px rgba(224,142,43,.3);
   flex-shrink: 0;
 }
 

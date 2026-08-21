@@ -1,19 +1,19 @@
-/* ---------- Kainos Brand Tokens ---------- */
+/* ---------- Brand Tokens ---------- */
 :root {
-  --kainos-navy:        #1A355D;
-  --kainos-navy-dark:   #0F2240;
-  --kainos-green:       #7DC242;
-  --kainos-green-dark:  #5FA02E;
-  --kainos-green-light: #B8E986;
-  --kainos-accent:      #00A3E0;
+  --kainos-navy:        #33306E;
+  --kainos-navy-dark:   #201D48;
+  --kainos-green:       #E08E2B;
+  --kainos-green-dark:  #B96F14;
+  --kainos-green-light: #F5C77E;
+  --kainos-accent:      #2FA8A0;
 
-  --bg:           #f4f6fa;
+  --bg:           #f5f4fa;
   --surface:      #ffffff;
-  --surface-alt:  #fafbfd;
-  --text:         #1A355D;
-  --text-soft:    #2c3e5d;
-  --text-muted:   #6b7689;
-  --border:       #dde3ed;
+  --surface-alt:  #fafafd;
+  --text:         #33306E;
+  --text-soft:    #423e73;
+  --text-muted:   #736e92;
+  --border:       #e1dfec;
 
   --error:      #d83025;
   --error-bg:   #fdecea;
@@ -22,9 +22,9 @@
   --warning:    #b45309;
   --warning-bg: #fef3c7;
 
-  --shadow-sm: 0 1px 3px rgba(26,53,93,.08);
-  --shadow-md: 0 4px 18px rgba(26,53,93,.10);
-  --shadow-lg: 0 12px 32px rgba(26,53,93,.14);
+  --shadow-sm: 0 1px 3px rgba(51,48,110,.08);
+  --shadow-md: 0 4px 18px rgba(51,48,110,.10);
+  --shadow-lg: 0 12px 32px rgba(51,48,110,.14);
 
   --radius:    8px;
   --radius-md: 10px;
@@ -141,7 +141,7 @@ input, select, textarea { font-family: inherit; }
 .form-control:focus {
   outline: none;
   border-color: var(--kainos-navy);
-  box-shadow: 0 0 0 3px rgba(26,53,93,.12);
+  box-shadow: 0 0 0 3px rgba(51,48,110,.12);
 }
 .form-control.is-invalid { border-color: var(--error); }
 .form-control.is-invalid:focus { box-shadow: 0 0 0 3px rgba(216,48,37,.15); }
@@ -159,7 +159,7 @@ input, select, textarea { font-family: inherit; }
   vertical-align: middle;
 }
 .spinner-navy {
-  border-color: rgba(26,53,93,.2);
+  border-color: rgba(51,48,110,.2);
   border-top-color: var(--kainos-navy);
 }
 

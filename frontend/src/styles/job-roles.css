@@ -123,8 +123,8 @@
   border-radius: 999px;
   font-size: 12px; font-weight: 600; letter-spacing: .2px;
 }
-.badge-level      { background: rgba(26,53,93,.08);   color: var(--kainos-navy); }
-.badge-capability { background: rgba(125,194,66,.15); color: var(--kainos-green-dark); }
+.badge-level      { background: rgba(51,48,110,.08);  color: var(--kainos-navy); }
+.badge-capability { background: rgba(224,142,43,.15); color: var(--kainos-green-dark); }
 
 /* ── Detail ── */
 .detail-card {
@@ -179,7 +179,7 @@
 /* ── Modal ── */
 .modal-backdrop {
   position: fixed; inset: 0;
-  background: rgba(15,34,64,.55);
+  background: rgba(32,29,72,.55);
   display: flex; align-items: center; justify-content: center;
   padding: 20px; z-index: 1000;
   animation: fadeIn .15s ease;

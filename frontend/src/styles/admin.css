@@ -51,11 +51,11 @@
   letter-spacing: 0.4px;
 }
 .role-pill.admin {
-  background: rgba(125, 194, 66, 0.15);
+  background: rgba(224, 142, 43, 0.15);
   color: var(--kainos-green-dark);
 }
 .role-pill.user {
-  background: rgba(26, 53, 93, 0.08);
+  background: rgba(51, 48, 110, 0.08);
   color: var(--kainos-navy);
 }
 
@@ -67,11 +67,11 @@
   font-size: 12px;
   font-weight: 600;
 }
-.tag-green { background: rgba(125, 194, 66, 0.15); color: var(--kainos-green-dark); }
+.tag-green { background: rgba(224, 142, 43, 0.15); color: var(--kainos-green-dark); }
 .tag-amber { background: rgba(245, 158, 11, 0.15); color: #b45309; }
-.tag-blue  { background: rgba(0, 163, 224, 0.15); color: #0277a3; }
+.tag-blue  { background: rgba(47, 168, 160, 0.15); color: #1f7a73; }
 .tag-red   { background: var(--error-bg); color: var(--error); }
-.tag-navy  { background: rgba(26, 53, 93, 0.08); color: var(--kainos-navy); }
+.tag-navy  { background: rgba(51, 48, 110, 0.08); color: var(--kainos-navy); }
 
 .target-cell {
   display: flex;
